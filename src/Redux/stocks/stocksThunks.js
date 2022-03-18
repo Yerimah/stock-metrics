@@ -21,12 +21,12 @@ export const fetchApiData = () => async (dispatch) => {
   }
 };
 
-export const fetchStockDetails = (symbol) => async (dispatch) => {
+export const fetchStockDetails = (payload) => async (dispatch) => {
   try {
     dispatch(startLoadingData(true));
-    const response = await fetch(`${Endpoint}/income-statement/${symbol}?limit=120&apikey=${ApiKey}`);
+    const response = await fetch(`${Endpoint}/income-statement/${payload.symbol}?limit=120&apikey=${ApiKey}`);
     const info = await response.json();
-    dispatch(retrieveSingleStock(info));
+    dispatch(retrieveSingleStock({ info, name: payload.companyName, price: payload.price }));
   } catch (err) {
     throw new Error(err);
   } finally {

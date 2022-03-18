@@ -47,7 +47,7 @@ export const Reducer = (state = initialMetrics, { type, payload }) => {
 export const singleStockReducer = (state = initialInfoState, { type, payload }) => {
   switch (type) {
     case GET_SINGLE_STOCK:
-      return { details: [...payload] };
+      return { details: [...payload.info], companyName: payload.name, price: payload.price };
     default:
       return state;
   }

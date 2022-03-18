@@ -26,12 +26,11 @@ const CardList = () => {
                   return filtered.name.toLowerCase().includes(searchVal);
                 }).map((item) => (
                   <Card
-                    key={item.item_id}
+                    key={item.symbol}
                     change={item.change}
                     companyName={item.name}
                     price={item.price}
                     changesPercentage={item.changesPercentage}
-                    // id={item.id}
                     symbol={item.symbol}
                   />
                 ))

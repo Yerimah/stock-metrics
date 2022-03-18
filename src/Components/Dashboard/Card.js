@@ -14,7 +14,7 @@ const Card = ({
   const dispatch = useDispatch();
 
   const onClick = () => {
-    dispatch(fetchStockDetails(symbol));
+    dispatch(fetchStockDetails({ symbol, companyName, price }));
   };
 
   return (

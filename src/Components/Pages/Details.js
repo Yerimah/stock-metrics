@@ -11,7 +11,11 @@ import styles from './details.module.css';
 // import { fetchStockDetails } from '../../Redux/stocks/stocksThunks';
 
 const Details = () => {
-  const details = useSelector(({ singleStockReducer }) => singleStockReducer.details);
+  const {
+    details,
+    companyName,
+    price,
+  } = useSelector(({ singleStockReducer }) => singleStockReducer);
 
   const dispatch = useDispatch();
 
@@ -43,11 +47,11 @@ const Details = () => {
         </Row>
       </div>
       {/* <Company /> */}
-      <h2 className={styles.dataheading}>Company Data</h2>
+      <h2 className={styles.dataheading}>{`${companyName} $${price}`}</h2>
 
       {
         details.map((item) => (
-          <li className={styles.items} key={item.item_id}>
+          <li className={styles.items} key={item.symbol}>
             <span>
               {item.calendarYear}
             </span>
