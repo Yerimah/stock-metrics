@@ -7,7 +7,6 @@ import { IoMdSettings } from 'react-icons/io';
 import { fetchApiData } from '../../Redux/stocks/stocksThunks';
 import styles from './details.module.css';
 
-
 const Details = () => {
   const {
     details,
