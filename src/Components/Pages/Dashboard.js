@@ -63,19 +63,15 @@
 
 // export default Dashboard;
 
-
-import React from 'react'
+import React from 'react';
 import CardList from '../Dashboard/CardList';
 import Header from './Header';
 
-const Dashboard = () => {
+const Dashboard = () => (
+  <div>
+    <Header />
+    <CardList />
+  </div>
 
-  return (
-    <div>
-        <Header />
-        <CardList />
-    </div>
-    
-  )
-}
- export default Dashboard;
+);
+export default Dashboard;

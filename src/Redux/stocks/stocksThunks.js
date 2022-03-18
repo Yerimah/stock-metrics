@@ -6,7 +6,7 @@ import {
 } from './stocksActions';
 
 const Endpoint = 'https://financialmodelingprep.com/api/v3/';
-const ApiKey = 'c8df2b2287beeee75ae5d11c25284393';
+const ApiKey = '5359bdf31c45879aa972450bd6e2275e';
 
 export const fetchApiData = () => async (dispatch) => {
   try {
