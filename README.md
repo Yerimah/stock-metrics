@@ -5,7 +5,7 @@
 ![Stocks app](https://user-images.githubusercontent.com/71140133/158986383-0d137bee-3297-4d46-9ee2-0f68a9ef9194.PNG)
 
 
-- [Live Demo](https://stockmetricapp.netlify.app/details)
+- [Live Demo](https://stockmetricapp.netlify.app/)
 - [Presentation Video](https://drive.google.com/file/d/1V9v9kPZpwUfDajJhNQSPXDhIEgmICpb-/view?usp=sharing)
 
 >  Stock metrics is a web(mobile-focused) app for checking the companies listed on the stock exchange and see their live metrics. Its data is consumed from the [Financial modelling API](https://site.financialmodelingprep.com/developer/docs/). It is built using React, Redux, and React-bootsrap, Skeleton Loader, Recharts.
