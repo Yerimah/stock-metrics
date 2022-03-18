@@ -6,9 +6,7 @@ import { AiOutlineArrowLeft, AiFillAudio } from 'react-icons/ai';
 import { IoMdSettings } from 'react-icons/io';
 import { fetchApiData } from '../../Redux/stocks/stocksThunks';
 import styles from './details.module.css';
-// import Company from '../Details/Company';
-// import IncomeStatement from '../Details/IncomeStats';
-// import { fetchStockDetails } from '../../Redux/stocks/stocksThunks';
+
 
 const Details = () => {
   const {
@@ -46,7 +44,6 @@ const Details = () => {
           </div>
         </Row>
       </div>
-      {/* <Company /> */}
       <h2 className={styles.dataheading}>{`${companyName} $${price}`}</h2>
 
       {
