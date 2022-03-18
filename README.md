@@ -2,7 +2,7 @@
 
 # Stock Metrics App
 
-![]()
+![Stocks app](https://user-images.githubusercontent.com/71140133/158986383-0d137bee-3297-4d46-9ee2-0f68a9ef9194.PNG)
 
 
 - [Live Demo]()

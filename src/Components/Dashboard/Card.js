@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Row, Col, Container } from 'react-bootstrap';
 import { BsArrowRightCircle, BsArrowUp, BsArrowDown } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
@@ -8,12 +9,12 @@ import styles from '../Pages/dashboard.module.css';
 import { fetchStockDetails } from '../../Redux/stocks/stocksThunks';
 
 const Card = ({
-  change, companyName, price, changesPercentage, id, companySymbol,
+  change, companyName, price, changesPercentage, symbol,
 }) => {
   const dispatch = useDispatch();
 
   const onClick = () => {
-    dispatch(fetchStockDetails(companySymbol));
+    dispatch(fetchStockDetails(symbol));
   };
 
   return (
@@ -28,7 +29,7 @@ const Card = ({
       </div>
       <div className="top-card">
         <span>
-          <h6>{id}</h6>
+          <h6>{symbol}</h6>
         </span>
         <span>
           <b>
@@ -61,3 +62,11 @@ const Card = ({
 };
 
 export default Card;
+
+Card.propTypes = {
+  change: PropTypes.number.isRequired,
+  companyName: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  changesPercentage: PropTypes.number.isRequired,
+  symbol: PropTypes.string.isRequired,
+};

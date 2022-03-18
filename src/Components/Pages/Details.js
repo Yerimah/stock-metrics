@@ -23,19 +23,19 @@ const Details = () => {
     <section className="pb-5">
       <div className={styles.nav}>
         <div className={styles.navbrand}>
-        <NavLink to="/" onClick={clickHandler}>
-          <div className={styles.navi}>
-            <AiOutlineArrowLeft color="white" size={25} />
+          <NavLink to="/" onClick={clickHandler}>
+            <div className={styles.navi}>
+              <AiOutlineArrowLeft color="white" size={25} />
+            </div>
+          </NavLink>
+
+          <div>
+            <h1>Stock Metrics</h1>
           </div>
-        </NavLink>
-        
-        <div>
-          <h1>Stock Metrics</h1>
-        </div>
         </div>
         <Row className={styles.sethead}>
           <div className={styles.mic}>
-            <AiFillAudio size={25}/>
+            <AiFillAudio size={25} />
           </div>
           <div>
             <IoMdSettings size={25} />
@@ -46,30 +46,29 @@ const Details = () => {
       <h2 className={styles.dataheading}>Company Data</h2>
 
       {
-        details.map((item, id) => (
-          <li className={styles.items} key={id}>
+        details.map((item) => (
+          <li className={styles.items} key={item.item_id}>
             <span>
-              Calendar Year:
-               {item.calendarYear}
+              {item.calendarYear}
             </span>
             <br />
 
             <div>
               <span>
-                Total Revenue: 
-                {item.revenue} 
+                Total Revenue:
+                {item.revenue}
                 billion
               </span>
               <br />
               <span>
-                Net Income: 
-                {item.netIncome} 
+                Net Income:
+                {item.netIncome}
                 billion
               </span>
               <br />
               <span>
-                Gross Profit: 
-                {item.grossProfit} 
+                Gross Profit:
+                {item.grossProfit}
                 billion
               </span>
             </div>
